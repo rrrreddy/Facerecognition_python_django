@@ -2,7 +2,11 @@
 This application leverages facial recognition technology to manage and recognize individual identities through a web-based interface. It offers functionalities ranging from dataset creation to real-time face detection, empowering users to train a facial recognition model tailored to their needs.
 
 ## Setup steps
--- 1. First thing to download the zip file
+-- 1. First thing to download the zip file or 
+use below command to clone the project 
+```
+git clone https://github.com/rrrreddy/Facerecognition_python_django.git
+```
 -- 2. create the virtual envirnment and activate it
 	virtualenv env
 ```
@@ -19,33 +23,38 @@ This application leverages facial recognition technology to manage and recognize
 
 ## How to run the project:
 
-Once pip has finished downloading the dependencies:
+Once the setup is complete, you can run the project with the following steps:
+
 ```
-	cd Project
+	cd Facerecognition_python_django
 	python manage.py runserver
 ```
-and navigate to 
+#### Launch the server:
 ```
 http://127.0.0.1:8000
 ```
 
 
-## Walkthrough:
-once we are in the url we can see 4 selectable options
--- 1. Detect by webcam 
--- 2. Train the classifier
--- 3. Create Dataset
--- 4. Admin panel
-1. first step is to create a dataset, click on create dataset that will prompt an popup there we have to give an unique id for the dataset the one it's going to take
-once we provided the id and submitted, camera will popup and take some random pictures of the person.
-2. Now the data set is ready but we don't have any information related to that data set like to whowm the images are reffered to, for that click on admit panel and login to the admit portal
-admin portal credentiols:
-username: admin
-password: admin
-under records clikc on add new record and provide the information.
-3. by the above step we are ready with the data set and information for it. now it's time to train our model for that just click on the tran model.
-4. model is also trained now it's time for detection, click on detect by webcam camera will popup and it will look for human face if it know person is detected it will redirected to details page.
-if an unknown person comes infornt of the camera on the camera screen itself it will shows us that unknow.
+## Application Walkthrough:
+The application interface provides four main functionalities:
 
+### Create Dataset:
 
-	
+Select "Create Dataset" to initiate a popup for dataset ID input.
+After ID submission, activate the camera to capture images, forming the dataset.
+
+### Admin Panel:
+
+Access the admin panel using:
+Username: ```admin```
+Password: ```admin```
+Add and manage records related to the datasets through the admin interface.
+
+### Train Classifier:
+
+Post dataset creation and management, select "Train Classifier" to train the model on the new data.
+Detection Mode:
+
+Use "Detect by Webcam" to start the facial recognition process.
+The system will identify registered faces and redirect to a details page for known individuals.
+Unknown faces will be marked as "Unknown" directly on the live camera feed.
